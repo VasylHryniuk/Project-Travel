@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  padding: 15px 39px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  border: 3px solid #1B7DFF;
+  transition: all .3s linear;
+  &:hover{
+    color: #1B7DFF;
+  }
+}
+
+.hvr-shutter-in-horizontal:before{
+  background-color: #1B7DFF
+}
+
+.btn-main{
+  font-size: 16px;
+line-height: 24px;
+color: #006DFE;
+border: none;
+outline: none;
+img{
+  margin-left: 25px;
+  transform: translateY(-2px);
+}
+}
+
+.title-line{
+  font-size: 35px;
+line-height: 42px;
+color: #102746;
+position: relative;
+&::after{
+  content: "";
+  width: 253px;
+  height: 3px;
+  background-color: #006DFE;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+}
+
+.burger-wrapper{
+  width: 40px;
+  height: 30px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.burger{
+  position: relative;
+  width: 40px;
+  height: 5px;
+  background-color: #fff;
+  &:before{
+    content: "";
+    position: absolute;
+    display: block;
+    top: -10px;
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    display: block;
+    top: 10px;
+    width: 40px;
+    height: 5px;
+    background-color: #fff;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+}
+
+.burger-active{
+ background-color: transparent;
+ &::before{
+   transform: rotate(45deg);
+   top: 0;
+   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+ }
+ &::after{
+  transform: rotate(-45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+}
