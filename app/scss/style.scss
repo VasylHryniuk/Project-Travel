@@ -616,7 +616,7 @@ svg path {
     stroke-width: inherit;
 }
 
-#hearth {
+.hearth {
     fill: #fff;
     transition: .2s linear;
 
@@ -626,7 +626,7 @@ svg path {
     }
 }
 
-#shape {
+.shape {
     fill: #fff;
     transition: .2s linear;
 
@@ -751,6 +751,8 @@ a{
     transition: all .2s linear;
 }
 }
+
+
 
 @media(max-width:1050px){
    .footer-nav__search{
